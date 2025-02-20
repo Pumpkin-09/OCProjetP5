@@ -1,5 +1,14 @@
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
 def log_decorator(func):
-     pass
+    def wrapper():
+        logging.info('Started')
+        result = func()
+        logging.info('Finished')
+        return result
+    return wrapper
  
 @log_decorator
 def function_test():
