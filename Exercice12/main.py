@@ -37,8 +37,31 @@ class Library:
             
     
     def borrowed_books(self):
-        print("Voici les livres emprintés:")
+        print("Voici les livres emprunter:")
         for book in self.borrow_books:
             print(book.title)
 
     # Ajouter les méthodes ici
+
+livre1 = Book("titre1", "author1", "year1")
+livre2 = Book("titre2", "author2", "year2")
+livre3 = Book("titre3", "author3", "year3")
+
+library = Library()
+
+library.add_book(livre1)
+library.add_book(livre2)
+library.add_book(livre3)
+
+library.available_books()
+library.borrowed_books()
+print("---\n")
+library.borrow_book(livre1.title)
+library.available_books()
+library.borrowed_books()
+print("---\n")
+library.return_book(livre1.title)
+library.available_books()
+print("---")
+library.borrowed_books()
+print("---\n")

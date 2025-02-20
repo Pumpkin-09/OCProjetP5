@@ -13,5 +13,8 @@ class other_class:
         self.first_name = first_name
         self.name = name
 
+
+
+
     def display_name(self):
         print(f"Nom complet : {self.first_name} {self.name}")
